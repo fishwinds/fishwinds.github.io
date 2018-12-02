@@ -20,32 +20,15 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body{
-    /* background-color: darkolivegreen;  */
-    background: url("images/sky.jpg") no-repeat;
+    font-family: "黑体","宋体","Arial","Microsoft YaHei",sans-serif;
     margin-left: 5%;
     margin-right: 5%;
     font-size: medium;
+    line-height: 2em;
 }
-
-h1{
-    border-bottom: 1px solid black;
-    text-align: center;
-    font-family:'coalitionregular',serif;
-    text-decoration: underline;
-}
-h2{
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-    border: 2px dotted rgba(0,0,0,0.1);
-    padding: 5px 20px 5px 20px;
-    font-family:'transformersregular',serif;
-}
-
-p{
-
+#header {
+    display: table;
     background-image:-webkit-linear-gradient(
             to right,
             rgba(0,0,0,0) 0%,
@@ -62,15 +45,99 @@ p{
             rgba(0,0,0,0.6) 90%,
             rgba(0,0,0,0.4) 95%,
             rgba(0,0,0,0) 100%);
-
-    font-family: "Bodoni MT Black", sans-serif;
-    font-size: 120%;
-    line-height: 120%;
+    margin:           0;
+    height:           80px;
+}
+#headerRow{
+    display: table-row;
+}
+#title{
+    display: table-cell;
+    padding: 50px 5px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-family:'coalitionregular',serif;
     color: lightskyblue;
-    padding: 30px 90px 30px 90px;
+    vertical-align: top;
+    width:  60%;
+}
+#slogan{
+    padding: 25px 5px 5px 12%;
+    display: table-cell;
+    font-size:  small;
+    width:  22%;
+    vertical-align: top;
+}
+#logo{
+    padding: 5px 10% 5px 5px;
+    display: table-cell;
+    zoom: 0.3;
+    vertical-align: top;
+}
+#background{
+    top:0;
+    left: 0;
+    position: fixed;
+    zoom: 1;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height:100%;
+    filter: blur( 15 );
+    min-width: 1000px;
+    background-color: white;
+    /* 背景图片随屏幕缩放*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+#main{
+    display: table;
+    margin: 20px;
+}
+#mainRow{
+    display: table-row;
 }
 
-p.onSale{
-    color: lightpink;
-    text-decoration: line-through;
+
+h2{
+    margin-left: 20%;
+    color: cornflowerblue;
+    margin-right: 20%;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
 }
+.sidebar{
+    display: table-cell;
+    background-color:      lightskyblue;
+    font-size:        105%;
+    padding: 30px;
+    width: 15%;
+    vertical-align: top;
+}
+.passage {
+    display: table-cell;
+    background-image:-webkit-linear-gradient(
+            to right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0.4) 5%,
+            rgba(0,0,0,0.6) 10%,
+            rgba(0,0,0,0.6) 90%,
+            rgba(0,0,0,0.4) 95%,
+            rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(
+            to right,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0.4) 5%,
+            rgba(0,0,0,0.6) 10%,
+            rgba(0,0,0,0.6) 90%,
+            rgba(0,0,0,0.4) 95%,
+            rgba(0,0,0,0) 100%
+    );
+    color: lightgray;
+    padding: 30px 90px 30px 90px;
+    margin: 30px;
+}
+
