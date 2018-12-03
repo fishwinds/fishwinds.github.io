@@ -24,55 +24,52 @@ body{
     font-family: "黑体","宋体","Arial","Microsoft YaHei",sans-serif;
     margin-left: 5%;
     margin-right: 5%;
-    font-size: medium;
+    font-size: small;
     line-height: 2em;
+}
+#netEaseMusicPlayer{
+    position: fixed;
+    right: 0;
+    bottom:0;
+    width: 20%;
 }
 #header {
     display: table;
-    background-image:-webkit-linear-gradient(
-            to right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0.4) 5%,
-            rgba(0,0,0,0.6) 10%,
-            rgba(0,0,0,0.6) 90%,
-            rgba(0,0,0,0.4) 95%,
-            rgba(0,0,0,0) 100%);
-    background-image: linear-gradient(
-            to right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0.4) 5%,
-            rgba(0,0,0,0.6) 10%,
-            rgba(0,0,0,0.6) 90%,
-            rgba(0,0,0,0.4) 95%,
-            rgba(0,0,0,0) 100%);
+    background-color: rgba(0,0,0,0.5);
+
     margin:           0;
     height:           80px;
+
 }
 #headerRow{
     display: table-row;
 }
 #title{
     display: table-cell;
-    padding: 50px 5px;
+    padding: 0 0 0 0 ;
+    /*background-color: green;*/
     text-align: center;
     font-style: italic;
     font-weight: bold;
     font-family:'coalitionregular',serif;
     color: lightskyblue;
-    vertical-align: top;
-    width:  60%;
+    vertical-align: middle;
+    width:  55%;
 }
 #slogan{
-    padding: 25px 5px 5px 12%;
+    padding: 0 0 0 2%;
     display: table-cell;
     font-size:  small;
+    /*background-color: red;*/
     width:  22%;
-    vertical-align: top;
+    vertical-align: middle;
 }
 #logo{
-    padding: 5px 10% 5px 5px;
+    padding: 0 2% 0 35%;
     display: table-cell;
-    zoom: 0.3;
+    /*zoom: 0.3; */
+    width:  55%;
+    /*background-color: red;*/
     vertical-align: top;
 }
 #background{
@@ -96,6 +93,7 @@ body{
 #main{
     display: table;
     margin: 20px;
+    border-spacing: 20px;
 }
 #mainRow{
     display: table-row;
@@ -111,7 +109,7 @@ h2{
 }
 .sidebar{
     display: table-cell;
-    background-color:      lightskyblue;
+    background-color:      rgba(87,190,220,0.5);
     font-size:        105%;
     padding: 30px;
     width: 15%;
@@ -119,25 +117,23 @@ h2{
 }
 .passage {
     display: table-cell;
-    background-image:-webkit-linear-gradient(
-            to right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0.4) 5%,
-            rgba(0,0,0,0.6) 10%,
-            rgba(0,0,0,0.6) 90%,
-            rgba(0,0,0,0.4) 95%,
-            rgba(0,0,0,0) 100%);
-    background-image: linear-gradient(
-            to right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0.4) 5%,
-            rgba(0,0,0,0.6) 10%,
-            rgba(0,0,0,0.6) 90%,
-            rgba(0,0,0,0.4) 95%,
-            rgba(0,0,0,0) 100%
-    );
+    background-color: rgba(0,0,0,0.5);
     color: lightgray;
-    padding: 30px 90px 30px 90px;
-    margin: 30px;
+    padding: 30px;
+}
+p.passage{
+    background-color: rgba(255,255,0,0.8);
 }
 
+#footer {
+    background-color: rgba(0,0,0,0.5);
+    color:            #efe5d0;
+    text-align:       center;
+    padding:          15px;
+    margin:           0 10px 10px 10px;
+    font-size:        90%;
+    clear:          right;
+}
+#git{
+    zoom: 0.7;
+}
