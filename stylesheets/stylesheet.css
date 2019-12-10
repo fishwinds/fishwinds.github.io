@@ -1,6 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* 
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,7 +43,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+html{  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat;}
 /* LAYOUT STYLES */
 body {
   font-size: 15px;
@@ -53,7 +51,6 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-weight: 400;
   color: #666;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
 }
 
 a {
@@ -64,49 +61,81 @@ a:hover {
 }
 
 header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 0%;
+  padding-bottom: 2%;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
 }
 
 header h1 {
   letter-spacing: -1px;
   font-size: 72px;
   color: #fff;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 0.2em;
   width: 540px;
+  text-align: right;
 }
 
 header h2 {
+  font-family: STHeiti, "Microsoft YaHei", SimSun;
+  margin: 0 0 0 60%;
   font-size: 26px;
   color: #9ddcff;
   font-weight: normal;
   line-height: 1.3;
   width: 540px;
   letter-spacing: 0;
+
 }
 
 .inner {
+
   position: relative;
-  width: 940px;
+  width: 740px;
   margin: 0 auto;
+  padding: 3% 5%;
+ 
+}
+.bg{
+  margin: 2% auto 0 auto;
+  background-color: rgba(0,0,0,0.4);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+#title{
+  padding: 0 0 0 4% ;
+  /*background-color: green;*/
+  text-align: center;
+  font-size: 10ex;
+}
+#clock{
+  padding: 0 4% 0 4%;
+  font-size:  small;
+  margin:0;
+  /*background-color: red; */
+  width:  20%;
+  vertical-align: middle;
+  float:left;
 }
 
 #content-wrapper {
-  border-top: solid 1px #fff;
-  padding-top: 30px;
+ /* border-top: solid 5px #fff; */
+  padding-top: 1%;
+  padding-bottom: 100%;
 }
 
 #main-content {
+
   width: 690px;
   float: left;
+  margin: 0 auto;
 }
 
 #main-content img {
   max-width: 100%;
+  height:auto;
 }
 
 aside#sidebar {
@@ -410,7 +439,7 @@ footer a:hover {
     width: 93%;
   }
   header {
-    padding: 20px 0;
+    padding: 2% 0 0 0;
   }
   header .inner {
     position: relative;

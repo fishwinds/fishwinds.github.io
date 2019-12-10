@@ -13,27 +13,67 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Merry Christmas from Cloudius Systems</title>
+    <title>Merry Christmas from fish</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
     <script src="javascripts/jquery.snow.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.beattext.js"></script>
+    <script type="text/javascript" src="javascripts/easying.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  参数详解:
+       *	upTime			上移的时间
+       *	downTime		下落的时间
+       *	beatHeight		上移高度
+       *	isAuth			是否自动
+       *	isRotate		是否旋转
+      */
+      $('p#beatText').beatText({isAuth:false,isRotate:false});
+      $('p#rotateText').beatText({isAuth:false,isRotate:true});
+      $('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
+      $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
+      $('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
+      });
+    </script>
+    <style>
+      /*下面两个是核心样式*/
+      .beat-char {
+          line-height: 3.4em;
+          position: relative;
+        display: inline-block;
+        background: transparent;
+
+      }
+
+      .rotate{
+        transform:rotate(360deg) ;
+        -ms-transform:rotate(360deg); 	/* IE 9 */
+        -moz-transform:rotate(360deg); 	/* Firefox */
+        -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+        -o-transform:rotate(360deg);
+        -webkit-transition-duration: 0.7s;
+      }
+    </style>
   </head>
 
   <body>
+    <script src="/demos/googlegg.js"></script>
     <header>
-      <div class="inner">
-        <h1>Merry Christmas</h1>
-        <h2></h2>
-        
+      <div class="inner bg">
+        <h1 id="title">Merry Christmas (^_^)</h1>
+        <p id="clock"><script type="text/javascript" src="javascripts/clock.js" ></script></p>
+        <h2><p id="roloadText">每天都要开心哦</p></h2>    
       </div>
     </header>
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-        <section id="main-content">
-         <img src="images/merry_christmasA1.png" alt="chrismas">
+        <section id="main-content"> 
+            <img id="wishesCard" src="images/merry_christmasA3.png" alt="chrismas">
         </section>
       </div>
-    </div>
+    </div>    
+    <embed src="bgm/bgm_snowman.mp3" autostart=true loop=2 hidden=true>
     <script>
       $(document).ready( function(){
       $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
