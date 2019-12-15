@@ -122,10 +122,6 @@ header h2 {
 .bg{
   margin: 2% auto 0 auto;
   background-color: rgba(0,0,0,0.4);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
 }
 #title{
   padding: 0 0 0 4% ;
