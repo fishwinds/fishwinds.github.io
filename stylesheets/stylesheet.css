@@ -49,7 +49,7 @@ html{  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat;}
 #loading{
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #000;
   position: fixed;
   top:0;
   left: 0;
@@ -459,7 +459,7 @@ footer a:hover {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   .inner {
-    width: 440px;
+    width: 288px;
   }
   header {
     padding: 2% 0 0 0;
