@@ -65,7 +65,7 @@ a:hover {
 header {
   margin: 0 auto;
   width: 100%;
-  height: 15em;
+  height: auto;
   padding-top: 0%;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   position: relative;
@@ -80,18 +80,18 @@ header {
 }
 .bg{
   margin: 0 auto;
+  width: 100%;
   background-color: rgba(0,0,0,0.7);
 }
 #headerRow{
-  display: table-row;
   width:100%;
+  position: relative;
 }
 .title{
-  display: table-cell;
-  padding: 0 0 0 65px ;
+  padding: 0 0 0 0;
   /*background-color: green;*/
   line-height: 1;
-  font-size: 35px;
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
@@ -99,25 +99,30 @@ header {
   vertical-align: middle;
 }
 #clock{
-  padding: 0 4% 0 4%;
-  font-size:  small;
-  margin:0;
-  /*background-color: red; */
-  width:  20%;
-  vertical-align: middle;
   float:left;
+  padding: 0 0 0 0;
+  font-size:  small;
+  margin:1em 2em 0 2em;
+  /*background-color: red; */
+  width:  auto;
+  vertical-align: middle;
 }
 
 #content-wrapper {
  /* border-top: solid 5px #fff; */
   padding-top: 1%;
   padding-bottom: 1%;
-  height:600px;
+  height: 700px;
 }
 
 audio{
-  float:right;
-  padding: 30px 0 0 45px;
+
+  position: fixed;
+  z-index: 999;
+  position: fixed;
+  left: 1em;
+  bottom:1em;
+  width: 20%;
   display: table-cell;
 }
 .card{
@@ -126,7 +131,12 @@ audio{
   height:100%;
   background-size:contain;
 }
-
+.card2{
+  background: url(../images/tree2.png) center center no-repeat;
+  width:100%;
+  height:100%;
+  background-size:contain;
+}
 ul, ol, dl {
   margin-bottom: 20px;
 }
