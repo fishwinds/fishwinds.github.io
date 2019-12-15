@@ -90,6 +90,7 @@ header {
   display: table-cell;
   padding: 0 0 0 65px ;
   /*background-color: green;*/
+  line-height: 1;
   font-size: 35px;
   text-align: center;
   font-weight: bold;
@@ -114,7 +115,11 @@ header {
   height:600px;
 }
 
-
+audio{
+  float:right;
+  padding: 30px 0 0 45px;
+  display: table-cell;
+}
 .card{
   background: url(../images/merry_christmasA3.png) center center no-repeat;
   width:100%;
