@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
@@ -27,33 +27,15 @@
       }
     </script>
     -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-      /*
-       *  参数详解:
-       *	upTime			上移的时间
-       *	downTime		下落的时间
-       *	beatHeight		上移高度
-       *	isAuth			是否自动
-       *	isRotate		是否旋转
-      */
-      $('p#beatText').beatText({isAuth:false,isRotate:false});
-      $('p#rotateText').beatText({isAuth:false,isRotate:true});
-      $('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
-      $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
-      $('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
-      });
-    </script>
     <style>
       /*下面两个是核心样式*/
       .beat-char {
-          line-height: 3.4em;
+          line-height:3.5em;
           position: relative;
         display: inline-block;
         background: transparent;
 
       }
-
       .rotate{
         transform:rotate(360deg) ;
         -ms-transform:rotate(360deg); 	/* IE 9 */
@@ -63,6 +45,8 @@
       }
     </style>
   </head>
+<!--------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------->
 
   <body>
     <script src="/demos/googlegg.js"></script>
@@ -71,25 +55,38 @@
       <i></i>
     </div>
     -->
-    <header>
-      <div class="inner bg">
-        <h1 id="title">Merry Christmas (^_^)</h1>
-        <p id="clock"><script type="text/javascript" src="javascripts/clock.js" ></script></p>
-        <h2><p id="roloadText">每天都要开心哦</p></h2>    
-      </div>
-    </header>
+
 
     <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content"> 
-            <img id="wishesCard" src="images/merry_christmasA3.png" alt="chrismas">
-        </section>
-      </div>
+            <!-- <img id="wishesCard" src="images/merry_christmasA4.png" alt="chrismas"> -->
+            <div class="card"></div>
     </div>    
     <embed src="bgm/bgm_snowman.mp3" autostart=true loop=2 hidden=true>
+    <!--  -->
+
+    <header class="bg">
+      <div id="headerRow">
+        <p id="clock"><script type="text/javascript" src="javascripts/clock.js" ></script></p>
+          <p id="roloadText" class="title">Merry Christmas, 每天都要开心哦 !</p>
+      </div>
+  </header class="bg">
     <script>
       $(document).ready( function(){
       $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
+
+      /*------------------------------------------------------------------------------
+       *  参数详解:
+       *	upTime			上移的时间
+       *	downTime		下落的时间
+       *	beatHeight		上移高度
+       *	isAuth			是否自动
+       *	isRotate		是否旋转
+      */
+      //$('p#beatText').beatText({isAuth:false,isRotate:false});
+      //$('p#rotateText').beatText({isAuth:false,isRotate:true});
+      //$('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
+      $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
+      //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
       }); 
     </script>  
   </body>

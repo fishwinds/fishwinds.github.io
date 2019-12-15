@@ -17,7 +17,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -46,29 +45,9 @@ table {
 html{  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat;}
 
 
-#loading{
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  position: fixed;
-  top:0;
-  left: 0;
-  z-index: 9999;
-}
- #loading >i{
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    background: url("/images/loading.gif") no-repeat;
-  }
-
 /* LAYOUT STYLES */
 body {
+  height:100%;
   font-size: 15px;
   line-height: 1.5; 
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
@@ -84,50 +63,39 @@ a:hover {
 }
 
 header {
+  margin: 0 auto;
+  width: 100%;
+  height: 15em;
   padding-top: 0%;
-  padding-bottom: 2%;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
+  position: relative;
 }
 
-header h1 {
-  letter-spacing: -1px;
-  font-size: 72px;
-  color: #fff;
-  line-height: 1.5;
-  margin-bottom: 0.2em;
-  width: 540px;
-  text-align: right;
-}
-
-header h2 {
-  font-family: STHeiti, "Microsoft YaHei", SimSun;
-  margin: 0 0 0 60%;
-  font-size: 26px;
-  color: #9ddcff;
-  font-weight: normal;
-  line-height: 1.3;
-  width: 540px;
-  letter-spacing: 0;
-
-}
 
 .inner {
-
+  font-size: inherit;
   position: relative;
-  width: 740px;
-  margin: 0 auto;
-  padding: 3% 5%;
- 
+  width: auto;
+  margin: 5% auto;
 }
 .bg{
-  margin: 2% auto 0 auto;
-  background-color: rgba(0,0,0,0.4);
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.7);
 }
-#title{
-  padding: 0 0 0 4% ;
+#headerRow{
+  display: table-row;
+  width:100%;
+}
+.title{
+  display: table-cell;
+  padding: 0 0 0 65px ;
   /*background-color: green;*/
+  font-size: 35px;
   text-align: center;
-  font-size: 10ex;
+  font-weight: bold;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
+  color: white;
+  vertical-align: middle;
 }
 #clock{
   padding: 0 4% 0 4%;
@@ -142,94 +110,16 @@ header h2 {
 #content-wrapper {
  /* border-top: solid 5px #fff; */
   padding-top: 1%;
-  padding-bottom: 100%;
+  padding-bottom: 1%;
+  height:600px;
 }
 
-#main-content {
 
-  width: 690px;
-  float: left;
-  margin: 0 auto;
-}
-
-#main-content img {
-  max-width: 100%;
-  height:auto;
-}
-
-aside#sidebar {
-  width: 200px;
-  padding-left: 20px;
-  min-height: 504px;
-  float: right;
-  background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
-  font-size: 12px;
-  line-height: 1.3;
-}
-
-aside#sidebar p.repo-owner,
-aside#sidebar p.repo-owner a {
-  font-weight: bold;
-}
-
-#downloads {
-  margin-bottom: 40px;
-}
-
-a.button {
-  width: 134px;
-  height: 58px;
-  line-height: 1.2;
-  font-size: 23px;
-  color: #fff;
-  padding-left: 68px;
-  padding-top: 22px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-}
-a.button small {
-  display: block;
-  font-size: 11px;
-}
-header a.button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
-}
-aside a.button {
-  width: 138px;
-  padding-left: 64px;
-  display: block;
-  background: transparent url(../images/download-button.png) 0 0 no-repeat;
-  margin-bottom: 20px;
-  font-size: 21px;
-}
-
-code, pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #222;
-  margin-bottom: 30px;
-  font-size: 13px;
-}
-
-code {
-  background-color: #f2f8fc;
-  border: solid 1px #dbe7f3;
-  padding: 0 3px;
-}
-
-pre {
-  padding: 20px;
-  background: #fff;
-  text-shadow: none;
-  overflow: auto;
-  border: solid 1px #f2f2f2;
-}
-pre code {
-  color: #2879d0;
-  background-color: #fff;
-  border: none;
-  padding: 0;
+.card{
+  background: url(../images/merry_christmasA3.png) center center no-repeat;
+  width:100%;
+  height:100%;
+  background-size:contain;
 }
 
 ul, ol, dl {
@@ -426,7 +316,8 @@ footer a:hover {
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .inner {
-    width: 640px;
+    width: auto;
+    height:auto;
   }
   header h1, header h2 {
     width: 340px;
@@ -455,7 +346,7 @@ footer a:hover {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   .inner {
-    width: 288px;
+    width: auto;
   }
   header {
     padding: 2% 0 0 0;
