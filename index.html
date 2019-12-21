@@ -18,15 +18,7 @@
     <script src="javascripts/jquery.snow.js"></script>
     <script type="text/javascript" src="javascripts/jquery.beattext.js"></script>
     <script type="text/javascript" src="javascripts/easying.js"></script>
-    <!--
-    <script type="text/javascript">
-      document.onreadystatechange = function () {
-        if(document.readyState === "complete"){
-            $("#loading").fadeOut();
-        }
-      }
-    </script>
-    -->
+
     <style>
       /*下面两个是核心样式*/
       .beat-char {
@@ -49,55 +41,66 @@
 <!--------------------------------------------------------------------------------------->
 
   <body>
+
+    <section id="loading">
+      <div class="loadingTexts">  Your tiny friend is sleeping   </div>
+      <span class="loading__anim"></span>
+      
+    </section>
+
+    <SCRIPT language=javascript>
+    function closeDiv()
+    {
+      document.getElementById('loading').style.visibility='hidden';
+    }
+    </SCRIPT>
+
     <script src="/demos/googlegg.js"></script>
     <!--
     <div id="loading">
       <i></i>
     </div>
     -->
-    <header class="bg">
-      <div id="headerRow">
-
-          <p id="clock"><script type="text/javascript" src="javascripts/clock.js" ></script></p>
-          <p id="roloadText" class="title">乖宝宝, Merry Christmas, 每天都要开心哦 !</p>
-      </div>
-    </header>
-
-    <div id="content-wrapper">
-            <!-- <img id="wishesCard" src="images/merry_christmasA4.png" alt="chrismas"> -->
-            <div class="card">
-            </div>
-    </div>          
-    <!--  -->
-    <div id="content-wrapper">
-      <div class="card2">
-      </div>
-    </div>  
-    <div id="content-wrapper">
-        <div class="card3">
+    <div class=video_box>
+      <header class="bg">
+        <div id="headerRow">
+            <p id="clock"><script type="text/javascript" src="javascripts/clock.js" ></script></p>
+            <p id="roloadText" class="title">乖宝宝, Merry Christmas, 每天都要开心哦 !</p>
         </div>
-    </div>  
-    <div id="content-wrapper">
-      <div class="card4">
-      </div>
-    </div>
-  <div id="content-wrapper">
-    <div class="card5">
-    </div>
-  </div>  
-  <div id="content-wrapper">
-    <div class="card6">
-    </div>
-  </div>
-  <div id="content-wrapper">
-    <div class="card7">
-    </div>
-  </div>    
+      </header>
 
-    <audio autoplay controls>
-      <source src="bgm/bgm_snowman.mp3">
-      不支持audio
-    </audio>
+      <div id="content-wrapper">
+              <!-- <img id="wishesCard" src="images/merry_christmasA4.png" alt="chrismas"> -->
+              <div class="card">
+              </div>
+      </div>          
+      <!--  -->
+      <div id="content-wrapper">
+        <div class="card2">
+        </div>
+      </div>  
+      <div id="content-wrapper">
+          <div class="card3">
+          </div>
+      </div>  
+      <div id="content-wrapper">
+      <div class="card5">
+      </div>
+      </div>  
+      <div id="content-wrapper">
+        <div class="card6">
+      </div>
+      </div>
+      <div id="content-wrapper">
+      <div class="card7">
+      </div>
+      </div>    
+      <audio autoplay controls>
+        <source src="bgm/bgm_snowman.mp3">
+        不支持audio
+      </audio>
+    </div>
+
     <script>
       $(document).ready( function(){
       $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
@@ -116,6 +119,19 @@
       $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
       //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
       }); 
-    </script>  
+      </SCRIPT>
+
+      <SCRIPT LANGUAGE="JavaScript">
+        document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+          $('#loading').fadeOut();
+          //让loading效果消失，显示页面
+				  $('body').css('overflow','scroll');
+				  $('.video_box').fadeIn(); 
+	        ///document ready
+          closeDiv()
+        }
+        };
+      </SCRIPT>
   </body>
 </html>
