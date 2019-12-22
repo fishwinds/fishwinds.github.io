@@ -43,7 +43,10 @@ table {
 	border-spacing: 0;
 }
 html{ 
-   background: #2e7bcf url(../images/header-bg1.jpg) 0 0 repeat;
+
+
+   width: 100%;
+   max-width: 100%;
   }
 
 
@@ -54,10 +57,12 @@ body {
   overflow: hidden;
   max-height:100%;
   font-size: 15px;
-  line-height: 1.5; 
+  line-height: 2.2rem;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-weight: 400;
   color: #666;
+  background-color: rgba(112, 183, 241, 1);
+  background: #2e7bcf url(../images/header-bg1.jpg) 0 0 repeat;
 }
 
 a {
@@ -112,24 +117,57 @@ header {
   margin: 0 auto;
   width: 100%;
   height: auto;
-  padding-top: 0%;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   position: relative;
+  z-index:0;
 }
 
-
-.inner {
-  font-size: inherit;
-  position: relative;
-  width: auto;
-  margin: 5% auto;
+.tab {
+  display: table;
+  width:100%;
+  position:relative;
+  z-index:-5;
 }
+.tab_row{
+  display: table-row;
+  width:100%;
+}
+.tab_cell{
+  display: table-cell;
+  vertical-align: top;
+}
+.main{
+  width:70%;
+
+}
+.aside{
+  width:30%;
+  padding:1.5rem;
+}
+
 .bg{
   margin: 0 auto;
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  position:fixed;
+  background-color: rgb(50, 66, 97);
   top:0%;
+  position: fixed;
+
+}
+.bg2{
+  background: linear-gradient(rgba(50, 66, 97,1) 20%,rgba(91, 132, 214,0.8) )
+}
+.bg3{
+  background-color: rgba(91, 132, 214,0.8);
+}
+.subtitle{
+  color: rgb(245, 38, 66);
+  width: auto auto;
+  font-size: 1.4rem;
+}
+.passage{
+  color: rgb(151, 205, 255);
+  width: auto auto;
+  line-height: 3;
 }
 #headerRow{
   width:100%;
@@ -138,8 +176,8 @@ header {
 .title{
   padding: 0 0 0 0;
   /*background-color: green;*/
-  line-height: 1;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  line-height: 2.2;
   text-align: center;
   font-weight: bold;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
@@ -161,12 +199,21 @@ header {
   padding-top: 1%;
   padding-bottom: 1%;
   height: 35rem;
+  z-index:-1;
 }
+.content-wrapper2 {
+  /* border-top: solid 5px #fff; */
+   padding-top: 1%;
+   padding-bottom: 1%;
+   height: 65rem;
+   z-index:-1;
+ }
 .content-wrapper_blank {
   /* border-top: solid 5px #fff; */
    padding-top: 1%;
    padding-bottom: 1%;
    height: 10rem;
+   z-index:-1;
  }
 audio{
 
@@ -216,14 +263,18 @@ audio{
 .card7{
   background: url(../images/frozen1.png) center center no-repeat;
   width:100%;
-  height: 65rem;
+  height:100%;
   background-size:contain;
 }
-ul, ol, dl {
-  margin-bottom: 20px;
+
+footer {
+  color:            #efe5d0;
+  text-align:       center;
+  padding:          15px;
+  margin:           -0.6px 0 0 0;
+  font-size:        90%;
+  clear:          right;
 }
-
-
 /* COMMON STYLES */
 
 hr {
@@ -340,10 +391,6 @@ h6:before {
   padding-right: 0.3em;
   margin-left: -3.7em;
 }
-
-p {
-  margin-bottom: 20px;
-}
  
 a {
   text-decoration: none;
@@ -375,6 +422,7 @@ dl dd {
   font-weight: 100;
 }
 
+/*
 footer {
   background: transparent url('../images/hr.png') 0 0 no-repeat;
   margin-top: 40px;
@@ -390,7 +438,7 @@ footer a {
 footer a:hover {
   color: #444;
 }
-
+*/
 /* MISC */
 .clearfix:after {
   clear: both;
@@ -438,6 +486,13 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+  .main{
+    width:60%;
+  
+  }
+  .aside{
+    width:40%;
+    line-height:1.7;
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -506,10 +561,36 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+  .title{
+    font-size: 0.8rem;
+  }
+  .main{
+    width:60%;
+  
+  }
+  div.aside{
+    width:40%;
+    font-size: 0.4rem;
+    line-height:1.2;
+    padding: 0 0.5rem;
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title{
+    font-size: 0.8rem;
+  }
+  .main{
+    width:60%;
+  
+  }
+  .aside{
+    width:40%;
+    font-size: 0.4rem;
+    line-height:1.2;
+    padding: 0 0.5rem;
+}
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}

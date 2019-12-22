@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" /> -->
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,7 +22,7 @@
     <style>
       /*下面两个是核心样式*/
       .beat-char {
-          line-height:2.2em;
+          line-height:2.2;
           position: relative;
         display: inline-block;
         background: transparent;
@@ -42,12 +42,41 @@
         document.getElementById('loading').style.visibility='hidden';
       }
     </SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">
+        document.onreadystatechange = function() {
+        if (document.readyState === 'complete') {
+          $('#loading').fadeOut();
+          //让loading效果消失，显示页面
+				  $('body').css('overflow','scroll');
+				  $('.video_box').fadeIn(); 
+	        ///document ready
+          closeDiv()
+        }
+        };
+    </SCRIPT>
+    <script LANGUAGE="JavaScript">
+          $(document).ready( function(){
+          $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
+    
+          /*------------------------------------------------------------------------------
+           *  参数详解:
+           *	upTime			上移的时间
+           *	downTime		下落的时间
+           *	beatHeight		上移高度
+           *	isAuth			是否自动
+           *	isRotate		是否旋转
+          */
+          //$('p#beatText').beatText({isAuth:false,isRotate:false});
+          //$('p#rotateText').beatText({isAuth:false,isRotate:true});
+          //$('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
+          $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
+          //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
+          }); 
+    </script>
   </head>
 <!--------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------->
-
   <body>
-
     <section id="loading">
       <div class="loadingTexts">  Your tiny friend is sleeping   </div>
       <span class="loading__anim"></span>  
@@ -60,71 +89,161 @@
             <p id="roloadText" class="title">乖宝宝, Merry Christmas, 每天都要开心哦 !</p>
         </div>
       </header>
-      <div class="content-wrapper_blank">
-        <!-- 空白 -->
-      </div>   
-      <div class="content-wrapper">
-              <!-- <img id="wishesCard" src="images/merry_christmasA4.png" alt="chrismas"> -->
-              <div class="card">
-              </div>
-      </div>          
-      <div class="content-wrapper">
-        <div class="card2">
-        </div>
-      </div>  
-      <div class="content-wrapper">
-          <div class="card3">
+      <div class="container tab">
+        <div class="tab_row">
+          <div class="main tab_cell">
+            <div class="content-wrapper_blank"></div> 
+            <div class="content-wrapper">
+                    <!-- <img id="wishesCard" src="images/merry_christmasA4.png" alt="chrismas"> -->
+                    <div class="card">
+                    </div>
+            </div>          
+            <div class="content-wrapper">
+                    <div class="card2">
+                    </div>
+            </div>  
+            <div class="content-wrapper">
+                    <div class="card3">
+                    </div>
+            </div>  
+            <div class="content-wrapper">
+                    <div class="card5">
+                    </div>
+            </div>  
+            <div class="content-wrapper">
+                    <div class="card6">
+                    </div>
+            </div>
+            <div class="content-wrapper2">
+                    <div class="card7">
+                    </div>
+            </div>
           </div>
-      </div>  
-      <div class="content-wrapper">
-      <div class="card5">
+          <div class="aside tab_cell bg2">
+            <div class="content-wrapper_blank"></div> 
+            <span class="aside title">"Do You Want To Build A Snowman?"</span>  
+            <br/>
+            <span class="aside subtitle">Kristen Bell, Agatha Lee Monn & Katie Lopez Lyrics</span> 
+            <br/> 
+            <span class="aside passage">
+              <br/>
+              (from "Frozen" soundtrack)
+              <br/>
+              <br/>
+              [5-Year-Old Anna:]
+              <br/>
+              Elsa?
+              <br/>
+              [Knocks]
+              <br/>
+              Do you wanna build a snowman?
+              <br/>
+              Come on, let's go and play!
+              <br/>
+              I never see you anymore
+              <br/>
+              Come out the door
+              <br/>
+              It's like you've gone away
+              <br/>
+              <br/>
+              We used to be best buddies
+              <br/>
+              And now we're not
+              <br/>
+              I wish you would tell me why!
+              <br/>
+              <br/>
+              Do you wanna build a snowman?
+              <br/>
+              It doesn't have to be a snowman...
+              <br/>
+              <br/>
+              
+              [8-Year-Old Elsa:] Go away, Anna.
+              <br/>
+              <br/>
+              
+              [5-Year-Old Anna:] Okay, bye...
+              <br/>
+              <br/>
+              
+              [Musical interlude]
+              <br/>
+              <br/>
+              [Knocks]
+              <br/>
+              <br/>
+              [9-Year-Old Anna:]
+              <br/>
+              Do you wanna build a snowman?
+              <br/>
+              Or ride our bike around the halls?
+              <br/>
+              I think some company is overdue
+              <br/>
+              I've started talking to
+              <br/>
+              The pictures on the walls!
+              <br/>
+              <br/>
+              (Hang in there, Joan.)
+              <br/>
+              <br/>
+              It gets a little lonely
+              <br/>
+              All these empty rooms
+              <br/>
+              Just watching the hours tick by...
+              <br/>
+              (Tick-tock tick-tock tick-tock tick-tock)
+              <br/>
+              <br/>
+              [Musical interlude]
+              <br/>
+              <br/>
+              [Partly crying]
+              <br/>
+              <br/>
+              [Knocks]
+              <br/>
+              <br/>
+              [15-Year-Old Anna:]
+              <br/>
+              Elsa, please I know you're in there
+              <br/>
+              People are asking where you've been
+              <br/>
+              They say, "Have courage, " and I'm trying to
+              <br/>
+              I'm right out here for you
+              <br/>
+              Just let me in
+              <br/>
+              <br/>
+              We only have each other
+              <br/>
+              It's just you and me
+              <br/>
+              What are we gonna do?
+              <br/>
+              <br/>
+              Do you wanna build a snowman?
+              <br/>
+            </span>
+          </div>
       </div>
-      </div>  
-      <div class="content-wrapper">
-        <div class="card6">
-      </div>
-      </div>
-      <div class="content-wrapper">
-      <div class="card7">
-      </div>
-      </div>    
-      <audio autoplay controls>
-        <source src="bgm/bgm_snowman.mp3">
-        不支持audio
-      </audio>
     </div>
-
-    <script>
-      $(document).ready( function(){
-      $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
-
-      /*------------------------------------------------------------------------------
-       *  参数详解:
-       *	upTime			上移的时间
-       *	downTime		下落的时间
-       *	beatHeight		上移高度
-       *	isAuth			是否自动
-       *	isRotate		是否旋转
-      */
-      //$('p#beatText').beatText({isAuth:false,isRotate:false});
-      //$('p#rotateText').beatText({isAuth:false,isRotate:true});
-      //$('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
-      $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
-      //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
-      }); 
-      </SCRIPT>
-
-      <SCRIPT LANGUAGE="JavaScript">
-        document.onreadystatechange = function() {
-        if (document.readyState === 'complete') {
-          $('#loading').fadeOut();
-          //让loading效果消失，显示页面
-				  $('body').css('overflow','scroll');
-				  $('.video_box').fadeIn(); 
-	        ///document ready
-          closeDiv()
-        }
-        };
-      </SCRIPT>
+    <audio autoplay controls>
+      <source src="bgm/bgm_snowman.mp3">
+      不支持audio
+    </audio>
+    <footer class="bg3">
+      &copy; 2019, fishwinds Software
+      <br>
+      All trademarks and registered trademarks appearing on
+      this site are totally nonesense.
+    </footer>
+    </div>
   </body>
 </html>
