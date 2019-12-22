@@ -31,12 +31,12 @@
 				
 			
 			var interval		= setInterval( function(){
-				var startPositionLeft 	= Math.random() * documentWidth - 100,
+				var startPositionLeft 	= Math.random() * documentWidth - 200,
 				 	startOpacity		= 0.5 + Math.random(),
 					sizeFlake			= options.minSize + Math.random() * options.maxSize,
-					endPositionTop		= documentHeight - 40,
+					endPositionTop		= documentHeight*6 - 40,
 					endPositionLeft		= startPositionLeft - 100 + Math.random() * 200,
-					durationFall		= documentHeight * 10 + Math.random() * 5000;
+					durationFall		= documentHeight * 60 + Math.random() * 5000;
 				$flake
 					.clone()
 					.appendTo('body')
