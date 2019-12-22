@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <!---<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>--->
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <!--<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" /> -->
@@ -14,7 +14,7 @@
     <![endif]-->
 
     <title>Merry Christmas from fish</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script src="javascripts/jquery-3.3.1.min.js"></script>
     <script src="javascripts/jquery.snow.js"></script>
     <script type="text/javascript" src="javascripts/jquery.beattext.js"></script>
     <script type="text/javascript" src="javascripts/easying.js"></script>
@@ -59,29 +59,31 @@
           //$('p#rotateText').beatText({isAuth:false,isRotate:true});
           //$('p#autoText').beatText({isAuth:true,beatHeight:"3em",isRotate:false});
           $('p#roloadText').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
-          //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
+          $('p#autoRotateText').beatText({isAuth:true,upTime:500,downTime:500,beatHeight:"2.5em",isRotate:true});
           }); 
     </script>
     <SCRIPT LANGUAGE="JavaScript">
-      $(document).ready( function(){ 
+      /*$(document).ready( function(){ 
                   $('#loading').fadeOut();
                   //让loading效果消失，显示页面
                   $('body').css('overflow','scroll');
                   $('.video_box').fadeIn(); 
                   ///document ready
-                  closeDiv()
-                });
+                  closeDiv();
+                }); */
     </SCRIPT>
 
     <SCRIPT LANGUAGE="JavaScript">
-                  setTimeout(function(){
-                    $('#loading').fadeOut();
-                    //让loading效果消失，显示页面
-                    $('body').css('overflow','scroll');
-                    $('.video_box').fadeIn(); 
-                    ///document ready
-                    closeDiv()
-                  },150000);
+                  document.onreadystatechange = () => {
+                    setTimeout(function(){
+                      $('#loading').fadeOut();
+                      //让loading效果消失，显示页面
+                      $('body').css('overflow','scroll');
+                      $('.video_box').fadeIn(); 
+                      ///document ready
+                      closeDiv();
+                    },3000); 
+                  }
     </SCRIPT>
   </head>
 <!--------------------------------------------------------------------------------------->
@@ -240,6 +242,9 @@
               <br/>
               Do you wanna build a snowman?
               <br/>
+              <br/>
+              <br/>
+              <p id="autoRotateText">Miss you...</p>
             </span>
           </div>
       </div>
