@@ -72,15 +72,21 @@
                   closeDiv()
                 });
     </SCRIPT>
-    <!---------------------------------------------------------------------------------
+
     <SCRIPT LANGUAGE="JavaScript">
           document.onreadystatechange = function() {
             if (document.readyState === 'complete') {
-
+                  setTimeout(function(){
+                    $('#loading').fadeOut();
+                    //让loading效果消失，显示页面
+                    $('body').css('overflow','scroll');
+                    $('.video_box').fadeIn(); 
+                    ///document ready
+                  closeDiv()
+                  },150000);
             }
           };
     </SCRIPT>
-    ----------------------------------------------------------------------------------->
   </head>
 <!--------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------->
