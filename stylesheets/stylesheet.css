@@ -156,13 +156,18 @@ header {
   vertical-align: middle;
 }
 
-#content-wrapper {
+.content-wrapper {
  /* border-top: solid 5px #fff; */
   padding-top: 1%;
   padding-bottom: 1%;
   height: 35rem;
 }
-
+.content-wrapper_blank {
+  /* border-top: solid 5px #fff; */
+   padding-top: 1%;
+   padding-bottom: 1%;
+   height: 10rem;
+ }
 audio{
 
   position: fixed;
