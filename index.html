@@ -36,6 +36,12 @@
         -o-transform:rotate(360deg);
       }
     </style>
+    <SCRIPT language=javascript>
+      function closeDiv()
+      {
+        document.getElementById('loading').style.visibility='hidden';
+      }
+    </SCRIPT>
   </head>
 <!--------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------->
@@ -44,23 +50,9 @@
 
     <section id="loading">
       <div class="loadingTexts">  Your tiny friend is sleeping   </div>
-      <span class="loading__anim"></span>
-      
+      <span class="loading__anim"></span>  
     </section>
 
-    <SCRIPT language=javascript>
-    function closeDiv()
-    {
-      document.getElementById('loading').style.visibility='hidden';
-    }
-    </SCRIPT>
-
-    <script src="/demos/googlegg.js"></script>
-    <!--
-    <div id="loading">
-      <i></i>
-    </div>
-    -->
     <div class=video_box>
       <header class="bg">
         <div id="headerRow">
@@ -76,7 +68,6 @@
               <div class="card">
               </div>
       </div>          
-      <!--  -->
       <div class="content-wrapper">
         <div class="card2">
         </div>
@@ -124,7 +115,7 @@
       </SCRIPT>
 
       <SCRIPT LANGUAGE="JavaScript">
-        document.onreadystatechange = () => {
+        document.onreadystatechange = function() {
         if (document.readyState === 'complete') {
           $('#loading').fadeOut();
           //让loading效果消失，显示页面
