@@ -42,18 +42,7 @@
         document.getElementById('loading').style.visibility='hidden';
       }
     </SCRIPT>
-    <SCRIPT LANGUAGE="JavaScript">
-        document.onreadystatechange = function() {
-        if (document.readyState === 'complete') {
-          $('#loading').fadeOut();
-          //让loading效果消失，显示页面
-				  $('body').css('overflow','scroll');
-				  $('.video_box').fadeIn(); 
-	        ///document ready
-          closeDiv()
-        }
-        };
-    </SCRIPT>
+
     <script LANGUAGE="JavaScript">
           $(document).ready( function(){
           $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
@@ -245,5 +234,19 @@
       this site are totally nonesense.
     </footer>
     </div>
+
+    <!--------------------------------------------------------------------------------------->
+    <SCRIPT LANGUAGE="JavaScript">
+      document.onreadystatechange = function() {
+      if (document.readyState === 'complete') {
+        $('#loading').fadeOut();
+        //让loading效果消失，显示页面
+        $('body').css('overflow','scroll');
+        $('.video_box').fadeIn(); 
+        ///document ready
+        closeDiv()
+      }
+      };
+  </SCRIPT>
   </body>
 </html>
