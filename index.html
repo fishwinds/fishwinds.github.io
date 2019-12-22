@@ -24,8 +24,8 @@
       .beat-char {
           line-height:2.2;
           position: relative;
-        display: inline-block;
-        background: transparent;
+          display: inline-block;
+          background: transparent;
 
       }
       .rotate{
@@ -45,7 +45,7 @@
 
     <script LANGUAGE="JavaScript">
           $(document).ready( function(){
-          //$.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
+          $.fn.snow( { minSize: 2, maxSize: 150, newOn: 500, flakeColor: '#FFFFFF' } );
     
           /*------------------------------------------------------------------------------
            *  参数详解:
@@ -62,12 +62,31 @@
           //$('p#autoRotateText').beatText({isAuth:true,upTime:700,downTime:700,beatHeight:"3em",isRotate:true});
           }); 
     </script>
+    <SCRIPT LANGUAGE="JavaScript">
+      $(document).ready(function(){ 
+                  $('#loading').fadeOut();
+                  //让loading效果消失，显示页面
+                  $('body').css('overflow','scroll');
+                  $('.video_box').fadeIn(); 
+                  ///document ready
+                  closeDiv()
+                });
+    </SCRIPT>
+    <!---------------------------------------------------------------------------------
+    <SCRIPT LANGUAGE="JavaScript">
+          document.onreadystatechange = function() {
+            if (document.readyState === 'complete') {
+
+            }
+          };
+    </SCRIPT>
+    ----------------------------------------------------------------------------------->
   </head>
 <!--------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------->
   <body>
     <section id="loading">
-      <div class="loadingTexts">  Your tiny friend is sleeping. If you're in china, try to use a ladder to hit him up!  </div>
+      <div class="loadingTexts">  Your tiny fish is having a nap. If you're in china, try to use a ladder to hit him up!  </div>
       <span class="loading__anim"></span>  
     </section>
 
@@ -223,20 +242,6 @@
           </div>
       </div>
     </div>
-    <!--------------------------------------------------------------------------------------->
-        <SCRIPT LANGUAGE="JavaScript">
-          document.onreadystatechange = function() {
-          if (document.readyState === 'complete') {
-            $('#loading').fadeOut();
-            //让loading效果消失，显示页面
-            $('body').css('overflow','scroll');
-            $('.video_box').fadeIn(); 
-            ///document ready
-            closeDiv()
-          }
-          };
-        </SCRIPT>
-    <!--------------------------------------------------------------------------------------->
     <audio autoplay controls>
       <source src="bgm/bgm_snowman.mp3">
       不支持audio
