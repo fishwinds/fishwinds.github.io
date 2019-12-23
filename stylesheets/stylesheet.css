@@ -175,7 +175,7 @@ header {
 .title{
   padding: 0 0 0 0;
   /*background-color: green;*/
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 2.2;
   text-align: center;
   font-weight: bold;
@@ -266,6 +266,12 @@ audio{
   width:100%;
   height:100%;
   background-size:contain;
+}
+
+p#autoRotateText{
+  word-break: normal;
+  word-wrap: normal;
+  word-spacing: normal;
 }
 
 footer {
