@@ -62,27 +62,29 @@
           $('p#autoRotateText').beatText({isAuth:true,upTime:500,downTime:500,beatHeight:"2.5em",isRotate:true});
           }); 
     </script>
-    <SCRIPT LANGUAGE="JavaScript">
-      /*$(document).ready( function(){ 
-                  $('#loading').fadeOut();
-                  //让loading效果消失，显示页面
-                  $('body').css('overflow','scroll');
-                  $('.video_box').fadeIn(); 
-                  ///document ready
-                  closeDiv();
-                }); */
-    </SCRIPT>
 
     <SCRIPT LANGUAGE="JavaScript">
                   document.onreadystatechange = () => {
-                    setTimeout(function(){
-                      $('#loading').fadeOut();
-                      //让loading效果消失，显示页面
-                      $('body').css('overflow','scroll');
-                      $('.video_box').fadeIn(); 
-                      ///document ready
-                      closeDiv();
-                    },3000); 
+                    if (document.readyState === 'complete'){
+                        setTimeout(function(){
+                        $('#loading').fadeOut();
+                        //让loading效果消失，显示页面
+                        $('body').css('overflow','scroll');
+                        $('.video_box').fadeIn(); 
+                        ///document ready
+                        closeDiv();
+                        },3000); 
+                    }
+                    else{
+                      setTimeout(function(){
+                        $('#loading').fadeOut();
+                        //让loading效果消失，显示页面
+                        $('body').css('overflow','scroll');
+                        $('.video_box').fadeIn(); 
+                        ///document ready
+                        closeDiv();
+                      },120000); 
+                    }
                   }
     </SCRIPT>
   </head>
